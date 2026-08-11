@@ -1,5 +1,7 @@
 import java.io.*;
 import java.net.*;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 public class ServidorTCP {
 
@@ -21,6 +23,13 @@ public class ServidorTCP {
                     if (mensagem.equalsIgnoreCase("sair")) {
                         saida.println("Encerrando conexão. Até mais!");
                         break;
+                    }
+
+                    if (mensagem.equalsIgnoreCase("hora")) {
+                        String horaAtual = LocalTime.now()
+                                .format(DateTimeFormatter.ofPattern("HH:mm:ss"));
+                        saida.println("Horário atual do servidor: " + horaAtual);
+                        continue;
                     }
 
                     saida.println("Monitor responde: recebi sua mensagem -> \"" + mensagem + "\"");

@@ -27,3 +27,17 @@ Um exemplo é o DNS, usado para resolver nomes de domínio em endereços IP: cad
 ### Questão 3
 
 Seria possível implementar, mas não de graça como no TCP. O servidor precisaria manter, na aplicação, uma estrutura própria (por exemplo um dicionário ou mapa) associando cada cliente ao par IP e porta observado em cada recvfrom(), já que o UDP não cria nenhum estado de conexão automaticamente. Como não existe um evento equivalente ao fechamento de conexão do TCP para avisar que um cliente saiu, seria necessário implementar também mensagens de entrada e saída definidas pela própria aplicação, além de um mecanismo de timeout para remover clientes que pararam de responder. Isso muda bastante a arquitetura: o controle de quem está conectado, que no TCP vem pronto da camada de transporte, passa a ser responsabilidade inteira do código da aplicação.
+
+## Parte C - Multicast
+
+### Questão 1
+
+No unicast repetido, o servidor monta e envia 3 pacotes idênticos, um para cada endereço de cliente, então o mesmo dado trafega várias vezes pela rede, inclusive em trechos de link compartilhados por mais de um cliente. No multicast, o servidor envia o pacote uma única vez para o endereço de grupo, e são os roteadores da rede que se encarregam de duplicar o pacote apenas nos pontos onde os caminhos até cada cliente se separam. Isso reduz bastante o tráfego total gerado pelo servidor, principalmente quando há muitos destinatários.
+
+### Questão 2
+
+O TTL (time to live) é um contador colocado no cabeçalho do pacote que é decrementado em uma unidade a cada roteador que ele atravessa; quando chega a zero, o pacote é descartado. No multicast ele é usado para limitar o alcance dos avisos na rede: com um TTL baixo (como o valor 2 usado no servidor Python deste laboratório), o pacote consegue passar por poucos roteadores e fica restrito a redes próximas, evitando que os avisos se espalhem por redes distantes sem necessidade, o que economiza banda e evita ruído em outras partes da rede.
+
+### Questão 3
+
+Não recebe. Nos nossos testes, os clientes só receberam os avisos porque já estavam abertos e inscritos no grupo antes do servidor começar a enviar (por isso o roteiro pede para abrir o cliente primeiro). O multicast é construído sobre UDP, então não guarda histórico nem reenvia o que já foi transmitido: cada aviso só chega a quem está com o socket aberto e escutando aquele grupo no exato momento do envio. Se um cliente ficar offline e voltar depois, ele simplesmente perdeu os avisos enviados nesse intervalo, da mesma forma que perderia qualquer datagrama UDP comum.

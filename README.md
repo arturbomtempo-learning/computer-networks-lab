@@ -22,25 +22,25 @@ Laboratório concluído: as quatro partes (TCP, UDP, Multicast e WebSocket) est�
 ## 📚 Índice
 
 - [Central de Avisos da Turma](#central-de-avisos-da-turma)
-  - [Status do Projeto](#-status-do-projeto)
-  - [Índice](#-índice)
-  - [Sobre o Projeto](#-sobre-o-projeto)
-  - [Funcionalidades Principais](#-funcionalidades-principais)
-  - [Tecnologias Utilizadas](#-tecnologias-utilizadas)
-  - [Arquitetura](#-arquitetura)
-  - [Instalação e Execução](#️-instalação-e-execução)
+  - [🚧 Status do Projeto](#-status-do-projeto)
+  - [📚 Índice](#-índice)
+  - [📝 Sobre o Projeto](#-sobre-o-projeto)
+  - [✨ Funcionalidades Principais](#-funcionalidades-principais)
+  - [🛠 Tecnologias Utilizadas](#-tecnologias-utilizadas)
+  - [🏗 Arquitetura](#-arquitetura)
+  - [⚙️ Instalação e Execução](#️-instalação-e-execução)
     - [Pré-requisitos](#pré-requisitos)
-    - [Parte A: TCP](#-parte-a-tcp)
-    - [Parte B: UDP](#-parte-b-udp)
-    - [Parte C: Multicast](#-parte-c-multicast)
-    - [Parte D: WebSocket](#-parte-d-websocket)
-  - [Estrutura de Pastas](#-estrutura-de-pastas)
-  - [Evidências](#️-evidências)
-  - [Referências](#-referências)
-  - [Uso Responsável de IA](#-uso-responsável-de-ia)
-  - [Agradecimentos](#-agradecimentos)
-  - [Autor](#-autor)
-  - [Licença](#-licença)
+    - [🔌 Parte A: TCP](#-parte-a-tcp)
+    - [📡 Parte B: UDP](#-parte-b-udp)
+    - [📢 Parte C: Multicast](#-parte-c-multicast)
+    - [💬 Parte D: WebSocket](#-parte-d-websocket)
+  - [📂 Estrutura de Pastas](#-estrutura-de-pastas)
+  - [🖼️ Evidências](#️-evidências)
+  - [📖 Referências](#-referências)
+  - [🤖 Uso Responsável de IA](#-uso-responsável-de-ia)
+  - [🙏 Agradecimentos](#-agradecimentos)
+  - [👤 Autor](#-autor)
+  - [📄 Licença](#-licença)
 
 ---
 
@@ -74,7 +74,7 @@ Cada uma dessas quatro partes foi implementada tanto em **Java** quanto em **Pyt
 
 ## 🛠 Tecnologias Utilizadas
 
-- **Java 17**: pacote `java.net` (`Socket`, `ServerSocket`, `DatagramSocket`, `MulticastSocket`) e `java.net.http.WebSocket`, todos nativos do JDK
+- **Java 21 ou superior**: pacote `java.net` (`Socket`, `ServerSocket`, `DatagramSocket`, `MulticastSocket`) e `java.net.http.WebSocket`, todos nativos do JDK
 - **Java-WebSocket 1.5.6**: biblioteca usada apenas no servidor WebSocket em Java, gerenciada via **Maven**
 - **Python 3.10 ou superior**: módulo `socket` da biblioteca padrão, usado em TCP, UDP e Multicast
 - **websockets**: biblioteca Python usada no mural em tempo real (`pip install websockets`)
@@ -99,7 +99,7 @@ A organização das pastas segue primeiro a linguagem (`java/`, `python/`) e dep
 
 ### Pré-requisitos
 
-- **Java JDK 17 ou superior** (`java -version`)
+- **Java JDK 21 ou superior** (`java -version`)
 - **Python 3.10 ou superior**, com o Python adicionado ao PATH (`python --version`)
 - **Maven 3.8 ou superior** (`mvn -version`), necessário apenas para o servidor WebSocket em Java
 - **Git**
@@ -288,7 +288,7 @@ Essas ferramentas foram usadas exclusivamente como apoio para **estruturar, form
 
 ## 🙏 Agradecimentos
 
-- [**Engenharia de Software PUC Minas**](https://www.instagram.com/engsoftwarepucminas/), pela estrutura acadêmica e pelo incentivo a boas práticas de engenharia desde os primeiros períodos.
+- **Engenharia de Software PUC Minas**, pela estrutura acadêmica e pelo incentivo a boas práticas de engenharia desde os primeiros períodos.
 - **Prof. Cristiano de Macêdo Neto**, por lecionar as aulas de Laboratório de Desenvolvimento de Aplicações Móveis e Distribuídas e por propor um roteiro tão completo de revisão de redes de computadores.
 
 ---

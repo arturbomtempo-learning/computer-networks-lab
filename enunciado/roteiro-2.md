@@ -9,6 +9,36 @@
 
 ---
 
+## Sumário
+
+- [1. Objetivos](#1-objetivos)
+- [2. Tema do laboratório: Central de Avisos da Turma](#2-tema-do-laboratório-central-de-avisos-da-turma)
+  - [2.1 Tempo sugerido](#21-tempo-sugerido)
+- [3. Preparação do ambiente](#3-preparação-do-ambiente)
+  - [3.1 Estrutura do repositório](#31-estrutura-do-repositório)
+  - [3.2 Evidências de teste (prints de tela)](#32-evidências-de-teste-prints-de-tela)
+  - [3.3 Portas exclusivas (evite colisão com colegas)](#33-portas-exclusivas-evite-colisão-com-colegas)
+  - [3.4 .gitignore](#34-gitignore)
+  - [3.5 Trabalhando em dupla com Git](#35-trabalhando-em-dupla-com-git)
+- [4. Parte A - TCP (comunicação confiável e orientada a conexão)](#4-parte-a---tcp-comunicação-confiável-e-orientada-a-conexão)
+  - [4.5 Tarefa](#45-tarefa)
+  - [4.6 Perguntas - Parte A](#46-perguntas---parte-a-responder-em-respostasmd)
+- [5. Parte B - UDP (comunicação sem conexão)](#5-parte-b---udp-comunicação-sem-conexão)
+  - [5.5 Tarefa](#55-tarefa)
+  - [5.6 Perguntas - Parte B](#56-perguntas---parte-b)
+- [6. Parte C - Multicast (comunicação em grupo)](#6-parte-c---multicast-comunicação-em-grupo)
+  - [6.5 Solução de problemas: "meu cliente não recebe nada"](#65-solução-de-problemas-meu-cliente-não-recebe-nada)
+  - [6.6 Tarefa](#66-tarefa)
+  - [6.7 Perguntas - Parte C](#67-perguntas---parte-c)
+- [7. Parte D - WebSocket (comunicação full-duplex em tempo real)](#7-parte-d---websocket-comunicação-full-duplex-em-tempo-real)
+  - [7.5 Tarefa](#75-tarefa)
+  - [7.6 Perguntas - Parte D](#76-perguntas---parte-d)
+- [8. Checklist de entrega](#8-checklist-de-entrega)
+- [9. Critérios de avaliação](#9-critérios-de-avaliação)
+- [10. Referências](#10-referências)
+
+---
+
 ## 1. Objetivos
 
 Ao final deste laboratório, o aluno deve ser capaz de:

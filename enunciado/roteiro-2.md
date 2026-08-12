@@ -11,31 +11,50 @@
 
 ## Sumário
 
-- [1. Objetivos](#1-objetivos)
-- [2. Tema do laboratório: Central de Avisos da Turma](#2-tema-do-laboratório-central-de-avisos-da-turma)
-  - [2.1 Tempo sugerido](#21-tempo-sugerido)
-- [3. Preparação do ambiente](#3-preparação-do-ambiente)
-  - [3.1 Estrutura do repositório](#31-estrutura-do-repositório)
-  - [3.2 Evidências de teste (prints de tela)](#32-evidências-de-teste-prints-de-tela)
-  - [3.3 Portas exclusivas (evite colisão com colegas)](#33-portas-exclusivas-evite-colisão-com-colegas)
-  - [3.4 .gitignore](#34-gitignore)
-  - [3.5 Trabalhando em dupla com Git](#35-trabalhando-em-dupla-com-git)
-- [4. Parte A - TCP (comunicação confiável e orientada a conexão)](#4-parte-a---tcp-comunicação-confiável-e-orientada-a-conexão)
-  - [4.5 Tarefa](#45-tarefa)
-  - [4.6 Perguntas - Parte A](#46-perguntas---parte-a-responder-em-respostasmd)
-- [5. Parte B - UDP (comunicação sem conexão)](#5-parte-b---udp-comunicação-sem-conexão)
-  - [5.5 Tarefa](#55-tarefa)
-  - [5.6 Perguntas - Parte B](#56-perguntas---parte-b)
-- [6. Parte C - Multicast (comunicação em grupo)](#6-parte-c---multicast-comunicação-em-grupo)
-  - [6.5 Solução de problemas: "meu cliente não recebe nada"](#65-solução-de-problemas-meu-cliente-não-recebe-nada)
-  - [6.6 Tarefa](#66-tarefa)
-  - [6.7 Perguntas - Parte C](#67-perguntas---parte-c)
-- [7. Parte D - WebSocket (comunicação full-duplex em tempo real)](#7-parte-d---websocket-comunicação-full-duplex-em-tempo-real)
-  - [7.5 Tarefa](#75-tarefa)
-  - [7.6 Perguntas - Parte D](#76-perguntas---parte-d)
-- [8. Checklist de entrega](#8-checklist-de-entrega)
-- [9. Critérios de avaliação](#9-critérios-de-avaliação)
-- [10. Referências](#10-referências)
+- [Roteiro de Laboratório - Revisão de Redes de Computadores](#roteiro-de-laboratório---revisão-de-redes-de-computadores)
+  - [Sumário](#sumário)
+  - [1. Objetivos](#1-objetivos)
+  - [2. Tema do laboratório: Central de Avisos da Turma](#2-tema-do-laboratório-central-de-avisos-da-turma)
+    - [2.1 Tempo sugerido](#21-tempo-sugerido)
+  - [3. Preparação do ambiente](#3-preparação-do-ambiente)
+    - [3.1 Estrutura do repositório](#31-estrutura-do-repositório)
+    - [3.2 Evidências de teste (prints de tela)](#32-evidências-de-teste-prints-de-tela)
+    - [3.3 Portas exclusivas (evite colisão com colegas)](#33-portas-exclusivas-evite-colisão-com-colegas)
+    - [3.4 `.gitignore`](#34-gitignore)
+    - [3.5 Trabalhando em dupla com Git](#35-trabalhando-em-dupla-com-git)
+  - [4. Parte A - TCP (comunicação confiável e orientada a conexão)](#4-parte-a---tcp-comunicação-confiável-e-orientada-a-conexão)
+    - [4.1 Java - `java/tcp/ServidorTCP.java`](#41-java---javatcpservidortcpjava)
+    - [4.2 Java - `java/tcp/ClienteTCP.java`](#42-java---javatcpclientetcpjava)
+    - [4.3 Python - `python/tcp/servidor_tcp.py`](#43-python---pythontcpservidor_tcppy)
+    - [4.4 Python - `python/tcp/cliente_tcp.py`](#44-python---pythontcpcliente_tcppy)
+    - [4.5 Tarefa](#45-tarefa)
+    - [4.6 Perguntas - Parte A (responder em `RESPOSTAS.md`)](#46-perguntas---parte-a-responder-em-respostasmd)
+  - [5. Parte B - UDP (comunicação sem conexão)](#5-parte-b---udp-comunicação-sem-conexão)
+    - [5.1 Java - `java/udp/ServidorUDP.java`](#51-java---javaudpservidorudpjava)
+    - [5.2 Java - `java/udp/ClienteUDP.java`](#52-java---javaudpclienteudpjava)
+    - [5.3 Python - `python/udp/servidor_udp.py`](#53-python---pythonudpservidor_udppy)
+    - [5.4 Python - `python/udp/cliente_udp.py`](#54-python---pythonudpcliente_udppy)
+    - [5.5 Tarefa](#55-tarefa)
+    - [5.6 Perguntas - Parte B](#56-perguntas---parte-b)
+  - [6. Parte C - Multicast (comunicação em grupo)](#6-parte-c---multicast-comunicação-em-grupo)
+    - [6.1 Java - `java/multicast/ServidorMulticast.java`](#61-java---javamulticastservidormulticastjava)
+    - [6.2 Java - `java/multicast/ClienteMulticast.java`](#62-java---javamulticastclientemulticastjava)
+    - [6.3 Python - `python/multicast/servidor_multicast.py`](#63-python---pythonmulticastservidor_multicastpy)
+    - [6.4 Python - `python/multicast/cliente_multicast.py`](#64-python---pythonmulticastcliente_multicastpy)
+    - [6.5 Solução de problemas: "meu cliente não recebe nada"](#65-solução-de-problemas-meu-cliente-não-recebe-nada)
+    - [6.6 Tarefa](#66-tarefa)
+    - [6.7 Perguntas - Parte C](#67-perguntas---parte-c)
+  - [7. Parte D - WebSocket (comunicação full-duplex em tempo real)](#7-parte-d---websocket-comunicação-full-duplex-em-tempo-real)
+    - [7.1 Java - dependência (Maven)](#71-java---dependência-maven)
+    - [7.2 Java - `java/websocket/src/main/java/MuralServidor.java`](#72-java---javawebsocketsrcmainjavamuralservidorjava)
+      - [Alternativa sem Maven (download manual do jar)](#alternativa-sem-maven-download-manual-do-jar)
+    - [7.3 Python - `python/websocket/mural_servidor.py`](#73-python---pythonwebsocketmural_servidorpy)
+    - [7.4 Python - `python/websocket/mural_cliente.py`](#74-python---pythonwebsocketmural_clientepy)
+    - [7.5 Tarefa](#75-tarefa)
+    - [7.6 Perguntas - Parte D](#76-perguntas---parte-d)
+  - [8. Checklist de entrega](#8-checklist-de-entrega)
+  - [9. Critérios de avaliação](#9-critérios-de-avaliação)
+  - [10. Referências](#10-referências)
 
 ---
 
@@ -947,12 +966,12 @@ git commit -m "feat(websocket): implementa mural em tempo real com WebSocket em 
 
 ## 8. Checklist de entrega
 
-- [ ] Repositório Git com a estrutura de pastas indicada, hospedado conforme orientação do professor (ex.: GitHub/GitLab da instituição)
-- [ ] Ao menos **4 commits principais** (um por parte - TCP, UDP, Multicast, WebSocket), com mensagens claras no padrão `tipo(escopo): descrição` (ex.: `feat(tcp): ...`)
-- [ ] Histórico de commits **incremental** - evite um único commit gigante no final; commits pequenos ao longo do desenvolvimento também são bem-vindos e contam a favor
-- [ ] Os 4 pares de solução (TCP, UDP, Multicast, WebSocket), cada um em **Java e Python**, executando corretamente
-- [ ] Pasta `evidencias/` com **8 prints de tela** (um por protocolo/linguagem) comprovando a execução de cada exemplo, conforme indicado na tarefa de cada parte
-- [ ] Arquivo `RESPOSTAS.md` completo, com as 12 perguntas (3 por parte) respondidas de forma própria e fundamentada no código implementado
+- [x] Repositório Git com a estrutura de pastas indicada, hospedado conforme orientação do professor (ex.: GitHub/GitLab da instituição)
+- [x] Ao menos **4 commits principais** (um por parte - TCP, UDP, Multicast, WebSocket), com mensagens claras no padrão `tipo(escopo): descrição` (ex.: `feat(tcp): ...`)
+- [x] Histórico de commits **incremental** - evite um único commit gigante no final; commits pequenos ao longo do desenvolvimento também são bem-vindos e contam a favor
+- [x] Os 4 pares de solução (TCP, UDP, Multicast, WebSocket), cada um em **Java e Python**, executando corretamente
+- [x] Pasta `evidencias/` com **8 prints de tela** (um por protocolo/linguagem) comprovando a execução de cada exemplo, conforme indicado na tarefa de cada parte
+- [x] Arquivo `RESPOSTAS.md` completo, com as 12 perguntas (3 por parte) respondidas de forma própria e fundamentada no código implementado
 
 ## 9. Critérios de avaliação
 

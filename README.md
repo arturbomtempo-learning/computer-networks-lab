@@ -2,7 +2,7 @@
 
 Laboratório prático de revisão de Redes de Computadores: o mesmo cenário de comunicação implementado quatro vezes (TCP, UDP, Multicast e WebSocket), cada uma em Java e em Python, para comparar na prática como cada protocolo se comporta.
 
-[![License](https://img.shields.io/github/license/arturbomtempo-learning/computer-networks-lab?style=for-the-badge&color=007ec6)](./LICENSE.md)
+![License](https://img.shields.io/badge/License-MIT-red?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Java](https://img.shields.io/badge/Java-21+-007396?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Maven](https://img.shields.io/badge/Maven-3.8%2B-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)
@@ -22,25 +22,25 @@ Laboratório concluído: as quatro partes (TCP, UDP, Multicast e WebSocket) est�
 ## 📚 Índice
 
 - [Central de Avisos da Turma](#central-de-avisos-da-turma)
-  - [Status do Projeto](#-status-do-projeto)
-  - [Índice](#-índice)
-  - [Sobre o Projeto](#-sobre-o-projeto)
-  - [Funcionalidades Principais](#-funcionalidades-principais)
-  - [Tecnologias Utilizadas](#-tecnologias-utilizadas)
-  - [Arquitetura](#-arquitetura)
-  - [Instalação e Execução](#️-instalação-e-execução)
+  - [🚧 Status do Projeto](#-status-do-projeto)
+  - [📚 Índice](#-índice)
+  - [📝 Sobre o Projeto](#-sobre-o-projeto)
+  - [✨ Funcionalidades Principais](#-funcionalidades-principais)
+  - [🛠 Tecnologias Utilizadas](#-tecnologias-utilizadas)
+  - [🏗 Arquitetura](#-arquitetura)
+  - [⚙️ Instalação e Execução](#️-instalação-e-execução)
     - [Pré-requisitos](#pré-requisitos)
-    - [Parte A: TCP](#-parte-a-tcp)
-    - [Parte B: UDP](#-parte-b-udp)
-    - [Parte C: Multicast](#-parte-c-multicast)
-    - [Parte D: WebSocket](#-parte-d-websocket)
-  - [Estrutura de Pastas](#-estrutura-de-pastas)
-  - [Evidências](#️-evidências)
-  - [Referências](#-referências)
-  - [Uso Responsável de IA](#-uso-responsável-de-ia)
-  - [Agradecimentos](#-agradecimentos)
-  - [Autor](#-autor)
-  - [Licença](#-licença)
+    - [🔌 Parte A: TCP](#-parte-a-tcp)
+    - [📡 Parte B: UDP](#-parte-b-udp)
+    - [📢 Parte C: Multicast](#-parte-c-multicast)
+    - [💬 Parte D: WebSocket](#-parte-d-websocket)
+  - [📂 Estrutura de Pastas](#-estrutura-de-pastas)
+  - [🖼️ Evidências](#️-evidências)
+  - [📖 Referências](#-referências)
+  - [🤖 Uso Responsável de IA](#-uso-responsável-de-ia)
+  - [🙏 Agradecimentos](#-agradecimentos)
+  - [👤 Autor](#-autor)
+  - [📄 Licença](#-licença)
 
 ---
 
